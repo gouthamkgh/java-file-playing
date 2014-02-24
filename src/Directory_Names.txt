@@ -1,3 +1,0 @@
-Desktop_fileList.txt
-Downloads_fileList.txt
-Pictures_fileList.txt
