@@ -44,7 +44,7 @@ public class FileOperations {
 				dirNamesArray.add(currentLine.trim());
 			}
 		} catch (Exception e) {
-			System.out.println("Error reading file");
+			System.out.println("Please load a directory first");
 		}
 		return dirNamesArray;
 	}
