@@ -10,26 +10,22 @@ import java.util.StringTokenizer;
 
 public class FileOperations { 
 	
-	public void writeToFile(String fileName, String content, boolean directory){
-		File file = null;
-		if(directory){
-			file = new File("Directory_Names.txt");
-		} else {
-			file = new File(fileName);
-		}
+	public void writeToFile(String fileName, String content){
+		File file = new File(fileName);
 		try {
 			if (!file.exists()) {
 				file.createNewFile();
 			}
-				FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
-				BufferedWriter bw = new BufferedWriter(fw);
-				StringTokenizer st = new StringTokenizer(content, "|||\n");
-				while (st.hasMoreTokens()) {
-					String s = st.nextToken().trim();
-					bw.write(s + "\n");
-				}
-				bw.close();
-		} catch (Exception e) {
+			FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			StringTokenizer st = new StringTokenizer(content, "|||\n");
+			while (st.hasMoreTokens()) {
+				String s = st.nextToken().trim();
+				bw.write(s + "\n");
+			}
+			bw.close();
+		} 
+		catch (Exception e) {
 			System.out.println("Invalid file name");
 		}
 	}

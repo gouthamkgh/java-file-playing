@@ -1,7 +1,6 @@
 package fileUtility;
 
 import ioPackage.FileOperations;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -25,8 +24,7 @@ public class FileQuery {
 					printFiles(f.getAbsolutePath(), fileName);
 				}
 			}
-			fo.writeToFile(fileName, sb.toString(), false);
-			
+			fo.writeToFile(fileName, sb.toString());			
 		} catch (Exception e) {
 			System.out.println("Specified directory does not exist");
 		}
@@ -57,7 +55,6 @@ public class FileQuery {
 		String temp = directoryName;
 		String[] splits = temp.split("/");
 		return splits[splits.length-1]+"_fileList.txt";
-		
 	}
 
 }

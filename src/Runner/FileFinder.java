@@ -1,7 +1,6 @@
 package Runner;
 
 import java.util.ArrayList;
-
 import ioPackage.FileOperations;
 import fileUtility.FileQuery;
 
@@ -35,19 +34,19 @@ public class FileFinder {
 					sb.append(s);
 					sb.append("|||\n");
 				}
-				fo.writeToFile("Directory_Names.txt", sb.toString(), true);
-				
-			}else if(command.equals("--find")){
+				fo.writeToFile("Directory_Names.txt", sb.toString());
+			}
+			else if(command.equals("--find")){
 				ArrayList<String> dirNames = fo.readFile("Directory_Names.txt");
 				for(String s : dirNames){
 					fq.searchFile(args[1], s);
 				}
 				fq.printResult();
-			}else{
+			}
+			else{
 				System.out.println("Wrong command.");
 			}
 		}
-		
 	}
 
 	public static void main(String[] args) {
