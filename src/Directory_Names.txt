@@ -1,2 +1,0 @@
-Desktop_fileList.txt
-Downloads_fileList.txt
